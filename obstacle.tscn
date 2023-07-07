@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://lkfnmr67el1k"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tvmr8"]
+radius = 30.0
+
+[node name="Obstacle" type="CharacterBody2D"]
+position = Vector2(836, 300)
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-17, -15, 26, 0, -17, 22)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_tvmr8")
