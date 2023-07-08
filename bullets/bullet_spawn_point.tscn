@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dc1a175r61jk5"]
+
+[ext_resource type="Texture2D" uid="uid://5r6q2g36nei0" path="res://bullets/bullet_spawn_point.png" id="1_e31yv"]
+
+[node name="BulletSpawnPoint" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 0, 1)
+texture = ExtResource("1_e31yv")
