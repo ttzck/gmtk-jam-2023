@@ -38,11 +38,13 @@ func spawn_bullet():
 	
 	spawn_point_inst.queue_free()
 	
-	var bullet_inst : Node2D = bullet.instantiate()
-	bullet_inst.global_position = rand_pos
-	bullet_inst.rotation = randf() * 2 * PI
-	bullet_inst.type = randi() % 2
-	add_child(bullet_inst)
+	for i in 10:
+		var bullet_inst : Node2D = bullet.instantiate()
+		bullet_inst.global_position = rand_pos
+		bullet_inst.rotation = randf() * 2 * PI
+		var type = randi() % 2
+		bullet_inst.type = type
+		add_child(bullet_inst)
 	
 
 
