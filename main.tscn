@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://c402ra1qqxy20"]
+[gd_scene load_steps=9 format=3 uid="uid://c402ra1qqxy20"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_5jxts"]
 [ext_resource type="Script" path="res://player.gd" id="1_elohq"]
+[ext_resource type="PackedScene" uid="uid://c566506beobp8" path="res://pause_menu.tscn" id="2_j0p1y"]
 [ext_resource type="Texture2D" uid="uid://c4jia5j8ak15e" path="res://player_sprite.png" id="2_wy4js"]
 [ext_resource type="Texture2D" uid="uid://bs6t0rvgseccc" path="res://big_circle.png" id="4_fneqx"]
 [ext_resource type="Script" path="res://bubble.gd" id="4_sf6rg"]
@@ -42,6 +43,13 @@ texture = ExtResource("4_fneqx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Bubble"]
 shape = SubResource("CircleShape2D_4bhrs")
+
+[node name="PauseMenu" parent="." instance=ExtResource("2_j0p1y")]
+visible = false
+offset_left = 296.0
+offset_top = 178.0
+offset_right = 296.0
+offset_bottom = 178.0
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
