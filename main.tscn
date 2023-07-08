@@ -51,6 +51,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="PauseMenu" parent="UI" instance=ExtResource("2_j0p1y")]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.05
