@@ -17,7 +17,7 @@ radius = 4.0
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(517, 298)
 script = ExtResource("1_elohq")
-movement_speed = 500
+movement_speed = 200
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 shape = SubResource("CircleShape2D_tvmr8")
