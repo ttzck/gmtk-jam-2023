@@ -13,8 +13,18 @@ func spawn_item():
 	var rand_pos = get_rand_screen_pos()
 	var item_inst : Node2D = item.instantiate()
 	item_inst.global_position = rand_pos
+	item_inst.connect("collected", on_item_collected)
 	add_child(item_inst)
 	
+	
+func on_item_collected(item):
+	item.queue_free()
+	$Player/Bubble.set_active(true)
+	
+	await get_tree().create_timer(5).timeout
+	
+	$Player/Bubble.set_active(false)
+	spawn_item()
 
 func spawn_bullet():
 	var rand_pos = get_rand_screen_pos()
