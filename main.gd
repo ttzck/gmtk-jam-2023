@@ -19,11 +19,8 @@ func spawn_item():
 	
 func on_item_collected(item):
 	item.queue_free()
-	$Player/Bubble.set_active(true)
-	
-	await get_tree().create_timer(5).timeout
-	
-	$Player/Bubble.set_active(false)
+	for bullet in get_tree().get_nodes_in_group("bullets"):
+		bullet.swap_type()
 	spawn_item()
 
 func spawn_bullet():
@@ -40,6 +37,7 @@ func spawn_bullet():
 	var bullet_inst : Node2D = bullet.instantiate()
 	bullet_inst.global_position = rand_pos
 	bullet_inst.rotation = randf() * 2 * PI
+	bullet_inst.type = Bullet.TypeEnum.HARMFUL
 	add_child(bullet_inst)
 	
 

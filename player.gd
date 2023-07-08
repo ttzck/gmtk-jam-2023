@@ -7,7 +7,7 @@ var canDash = true
 var dashing = false
 var movement = Vector2.ZERO
 var dash_speed = 5
-
+var score = 0
 
 func _process(delta):
 	$PlayerSprite.modulate = Color(randf(), randf(), randf())
@@ -23,7 +23,11 @@ func _physics_process(delta):
 		for i in get_slide_collision_count():
 			var collision = get_slide_collision(i)
 			if collision.get_collider().is_in_group("bullets"):
-				get_tree().reload_current_scene()
+				if collision.get_collider().type == Bullet.TypeEnum.COLLECTABLE:
+					score += 1
+					collision.get_collider().queue_free()
+				elif collision.get_collider().type == Bullet.TypeEnum.HARMFUL:
+					get_tree().reload_current_scene()
 
 
 func update_movement_input():

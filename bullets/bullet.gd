@@ -1,6 +1,21 @@
-extends CharacterBody2D
+class_name Bullet extends CharacterBody2D
 
 @export var speed = 100
+
+enum TypeEnum {COLLECTABLE, HARMFUL}
+var type : TypeEnum
+
+
+func _ready():
+	update_visuals()
+	
+func update_visuals():
+	match type:
+		TypeEnum.COLLECTABLE:
+			$Sprite.modulate = Color.BLUE
+		TypeEnum.HARMFUL:
+			$Sprite.modulate = Color.RED
+
 
 func _physics_process(delta):
 	var bound = get_viewport_rect().size
@@ -10,3 +25,12 @@ func _physics_process(delta):
 		rotation *= -1
 	var fwd = transform.basis_xform(Vector2.RIGHT)
 	move_and_collide(fwd * speed * delta)
+
+
+func swap_type():
+	match type:
+		TypeEnum.COLLECTABLE:
+			type = TypeEnum.HARMFUL
+		TypeEnum.HARMFUL:
+			type = TypeEnum.COLLECTABLE
+	update_visuals()

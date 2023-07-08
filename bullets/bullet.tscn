@@ -9,10 +9,11 @@ radius = 4.0
 [node name="Bullet" type="CharacterBody2D" groups=["bullets"]]
 position = Vector2(707, 334)
 collision_layer = 2
+collision_mask = 0
 script = ExtResource("1_odk0o")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_j0qk4")
 
-[node name="PlayerSprite" type="Sprite2D" parent="."]
+[node name="Sprite" type="Sprite2D" parent="."]
 texture = ExtResource("2_jh2hg")
