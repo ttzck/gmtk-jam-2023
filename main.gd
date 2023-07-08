@@ -1,8 +1,8 @@
 extends Node2D
 
-@export var bullet : PackedScene
-@export var bullet_spawn_point : PackedScene
-@export var item : PackedScene
+var bullet = preload("res://bullets/bullet.tscn")
+var bullet_spawn_point = preload("res://bullets/bullet_spawn_point.tscn")
+var item = preload("res://item.tscn")
 
 
 func _ready():
