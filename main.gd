@@ -2,10 +2,22 @@ extends Node2D
 
 @export var bullet : PackedScene
 @export var bullet_spawn_point : PackedScene
+@export var item : PackedScene
+
+
+func _ready():
+	spawn_item()
+	
+	
+func spawn_item():
+	var rand_pos = get_rand_screen_pos()
+	var item_inst : Node2D = item.instantiate()
+	item_inst.global_position = rand_pos
+	add_child(item_inst)
+	
 
 func spawn_bullet():
-	var arena_rect = get_viewport_rect().size
-	var rand_pos = Vector2(randf() * arena_rect.x, randf() * arena_rect.y)
+	var rand_pos = get_rand_screen_pos()
 	
 	var spawn_point_inst : Node2D = bullet_spawn_point.instantiate()
 	spawn_point_inst.global_position = rand_pos
@@ -20,6 +32,11 @@ func spawn_bullet():
 	bullet_inst.rotation = randf() * 2 * PI
 	add_child(bullet_inst)
 	
+
+
+func get_rand_screen_pos():
+	var arena_rect = get_viewport_rect().size
+	return Vector2(randf() * arena_rect.x, randf() * arena_rect.y)
 
 
 func _on_bullet_spawn_timer_timeout():

@@ -8,6 +8,7 @@ var dashing = false
 var movement = Vector2.ZERO
 var dash_speed = 5
 
+
 func _process(delta):
 	$PlayerSprite.modulate = Color(randf(), randf(), randf())
 	dash()
@@ -19,7 +20,10 @@ func _physics_process(delta):
 		
 	velocity = movement.normalized() * movement_speed
 	if move_and_slide():
-		get_tree().reload_current_scene()
+		for i in get_slide_collision_count():
+			var collision = get_slide_collision(i)
+			if collision.get_collider().is_in_group("bullets"):
+				get_tree().reload_current_scene()
 
 
 func update_movement_input():
