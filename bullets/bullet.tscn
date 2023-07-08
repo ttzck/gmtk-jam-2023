@@ -8,8 +8,10 @@ radius = 4.0
 
 [node name="Bullet" type="CharacterBody2D" groups=["bullets"]]
 position = Vector2(707, 334)
+scale = Vector2(5, 5)
 collision_layer = 2
 script = ExtResource("1_odk0o")
+speed = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_j0qk4")

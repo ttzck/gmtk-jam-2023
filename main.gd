@@ -20,9 +20,12 @@ func spawn_item():
 func on_item_collected(item):
 	item.queue_free()
 	$Player/Bubble.set_active(true)
+	$Player.is_bullet = true
+	$Player.rotate(randf() * TAU)
 	
-	await get_tree().create_timer(5).timeout
+	await get_tree().create_timer(4).timeout
 	
+	$Player.is_bullet = false
 	$Player/Bubble.set_active(false)
 	spawn_item()
 

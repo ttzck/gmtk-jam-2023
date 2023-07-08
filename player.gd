@@ -7,6 +7,7 @@ var canDash = true
 var dashing = false
 var movement = Vector2.ZERO
 var dash_speed = 5
+var is_bullet = false
 
 
 func _process(delta):
@@ -15,15 +16,24 @@ func _process(delta):
 
 
 func _physics_process(delta):
-	if not dashing:
-		update_movement_input()
-		
-	velocity = movement.normalized() * movement_speed
-	if move_and_slide():
-		for i in get_slide_collision_count():
-			var collision = get_slide_collision(i)
-			if collision.get_collider().is_in_group("bullets"):
-				get_tree().reload_current_scene()
+	if is_bullet:
+		var bound = get_viewport_rect().size
+		if global_position.x > bound.x or global_position.x < 0:
+			rotation = PI - rotation
+		if global_position.y > bound.y or global_position.y < 0:
+			rotation *= -1
+		velocity = transform.basis_xform(Vector2.RIGHT) * movement_speed * 3
+		move_and_slide()
+	else:
+		if not dashing:
+			update_movement_input()
+			
+		velocity = movement.normalized() * movement_speed
+		if move_and_slide():
+			for i in get_slide_collision_count():
+				var collision = get_slide_collision(i)
+				if collision.get_collider().is_in_group("bullets"):
+					get_tree().reload_current_scene()
 
 
 func update_movement_input():
@@ -39,7 +49,7 @@ func update_movement_input():
 
 
 func dash():
-	if Input.is_action_just_pressed("dash") and not dashing:
+	if Input.is_action_just_pressed("dash") and not dashing and not is_bullet:
 		dashing = true
 		movement_speed = movement_speed * dash_speed
 		await get_tree().create_timer(dash_duration).timeout
