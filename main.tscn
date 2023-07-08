@@ -44,18 +44,20 @@ texture = ExtResource("4_fneqx")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Bubble"]
 shape = SubResource("CircleShape2D_4bhrs")
 
-[node name="PauseMenu" parent="." instance=ExtResource("2_j0p1y")]
-visible = false
-offset_left = 296.0
-offset_top = 178.0
-offset_right = 296.0
-offset_bottom = 178.0
-
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="PauseMenu" parent="UI" instance=ExtResource("2_j0p1y")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.025
+anchor_right = 16.075
+anchor_bottom = 9.15
+metadata/_edit_use_anchors_ = true
 
 [node name="Score" type="Label" parent="UI"]
 layout_mode = 1
