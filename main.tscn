@@ -16,7 +16,7 @@ radius = 32.0
 script = ExtResource("1_5jxts")
 
 [node name="BulletSpawnTimer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 0.3
 autostart = true
 
 [node name="Player" type="CharacterBody2D" parent="." groups=["player"]]
@@ -42,6 +42,18 @@ texture = ExtResource("4_fneqx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Bubble"]
 shape = SubResource("CircleShape2D_4bhrs")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Score" type="Label" parent="UI"]
+layout_mode = 1
+offset_right = 43.0
+offset_bottom = 26.0
+text = "42"
 
 [connection signal="timeout" from="BulletSpawnTimer" to="." method="_on_bullet_spawn_timer_timeout"]
 [connection signal="body_entered" from="Player/Bubble" to="Player/Bubble" method="_on_body_entered"]

@@ -8,6 +8,10 @@ var item = preload("res://item.tscn")
 func _ready():
 	spawn_item()
 	
+
+func _process(delta):
+	$UI/Score.text = str($Player.score) + " Points"
+
 	
 func spawn_item():
 	var rand_pos = get_rand_screen_pos()
@@ -37,7 +41,7 @@ func spawn_bullet():
 	var bullet_inst : Node2D = bullet.instantiate()
 	bullet_inst.global_position = rand_pos
 	bullet_inst.rotation = randf() * 2 * PI
-	bullet_inst.type = Bullet.TypeEnum.HARMFUL
+	bullet_inst.type = randi() % 2
 	add_child(bullet_inst)
 	
 
