@@ -16,11 +16,11 @@ radius = 32.0
 script = ExtResource("1_5jxts")
 
 [node name="BulletSpawnTimer" type="Timer" parent="."]
-wait_time = 0.1
+wait_time = 0.5
 autostart = true
 
 [node name="Player" type="CharacterBody2D" parent="." groups=["player"]]
-position = Vector2(517, 298)
+position = Vector2(295, 177)
 collision_mask = 7
 script = ExtResource("1_elohq")
 movement_speed = 200
