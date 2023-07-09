@@ -15,7 +15,7 @@ var player_left = preload("res://sprites/player_left.png")
 var player_right = preload("res://sprites/player_right.png")
 
 func _process(delta):
-	$PlayerSprite.modulate = Color(randf(), randf(), randf())
+	#$PlayerSprite.modulate = Color(randf(), randf(), randf())
 	dash()
 
 
