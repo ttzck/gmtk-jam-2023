@@ -24,7 +24,8 @@ func _physics_process(delta):
 	if global_position.y > bound.y or global_position.y < 0:
 		rotation *= -1
 	var fwd = transform.basis_xform(Vector2.RIGHT)
-	move_and_collide(fwd * speed * delta)
+	if type == TypeEnum.HARMFUL:
+		move_and_collide(fwd * speed * delta)
 
 
 func swap_type():

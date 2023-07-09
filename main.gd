@@ -40,7 +40,7 @@ func spawn_bullet():
 	
 	for i in 10:
 		var bullet_inst : Node2D = bullet.instantiate()
-		bullet_inst.global_position = rand_pos
+		bullet_inst.global_position = rand_pos + Vector2.RIGHT.rotated(randf() * TAU) * randf() * 16
 		bullet_inst.rotation = randf() * 2 * PI
 		var type = randi() % 2
 		bullet_inst.type = type
