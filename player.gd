@@ -9,6 +9,11 @@ var dashing = false
 var movement = Vector2.ZERO
 var score = 0
 
+var player_up = preload("res://sprites/player_up.png")
+var player_down = preload("res://sprites/player_down.png")
+var player_left = preload("res://sprites/player_left.png")
+var player_right = preload("res://sprites/player_right.png")
+
 func _process(delta):
 	$PlayerSprite.modulate = Color(randf(), randf(), randf())
 	dash()
@@ -41,6 +46,7 @@ func update_movement_input():
 		movement += Vector2.DOWN
 	if Input.is_action_pressed("move_right"):
 		movement += Vector2.RIGHT
+	update_sprite()
 
 
 func dash():
@@ -58,4 +64,15 @@ func dash():
 
 func _on_button_pressed():
 	print("BUTTON PRESSED")
+	
+func update_sprite():
+	if movement.x > 0:
+		$PlayerSprite.texture = player_right
+	if movement.x < 0:
+		$PlayerSprite.texture = player_left
+	if movement.y > 0:
+		$PlayerSprite.texture = player_down
+	if movement.y < 0:
+		$PlayerSprite.texture = player_up
+	
 

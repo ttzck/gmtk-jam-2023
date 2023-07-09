@@ -12,9 +12,13 @@ func _ready():
 func update_visuals():
 	match type:
 		TypeEnum.COLLECTABLE:
-			$Sprite.modulate = Color.BLUE
+			$Sprite_pea.hide()
+			$Sprite_beret.show()
 		TypeEnum.HARMFUL:
-			$Sprite.modulate = Color.RED
+			$Sprite_pea.show()
+			$Sprite_beret.modulate.h = randf()
+			$Sprite_beret.modulate.s = 1.0
+			$Sprite_beret.hide()
 
 
 func _physics_process(delta):
