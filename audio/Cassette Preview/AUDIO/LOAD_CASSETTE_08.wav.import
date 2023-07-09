@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://7v3suoetjkhn"
+path="res://.godot/imported/LOAD_CASSETTE_08.wav-87289f85c4712fa30851affef743e977.sample"
+
+[deps]
+
+source_file="res://audio/Cassette Preview/AUDIO/LOAD_CASSETTE_08.wav"
+dest_files=["res://.godot/imported/LOAD_CASSETTE_08.wav-87289f85c4712fa30851affef743e977.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

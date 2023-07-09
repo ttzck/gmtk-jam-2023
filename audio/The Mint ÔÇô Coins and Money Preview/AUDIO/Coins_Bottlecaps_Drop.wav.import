@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dwkrnu1dk4i37"
+path="res://.godot/imported/Coins_Bottlecaps_Drop.wav-e374087dd5d889b46dca789215d4d48f.sample"
+
+[deps]
+
+source_file="res://audio/The Mint ÔÇô Coins and Money Preview/AUDIO/Coins_Bottlecaps_Drop.wav"
+dest_files=["res://.godot/imported/Coins_Bottlecaps_Drop.wav-e374087dd5d889b46dca789215d4d48f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

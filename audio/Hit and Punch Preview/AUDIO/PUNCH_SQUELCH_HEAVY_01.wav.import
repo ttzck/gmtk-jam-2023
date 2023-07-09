@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cm04d6yx4kaho"
+path="res://.godot/imported/PUNCH_SQUELCH_HEAVY_01.wav-097f24661626c551c6276fd1f08e8f24.sample"
+
+[deps]
+
+source_file="res://audio/Hit and Punch Preview/AUDIO/PUNCH_SQUELCH_HEAVY_01.wav"
+dest_files=["res://.godot/imported/PUNCH_SQUELCH_HEAVY_01.wav-097f24661626c551c6276fd1f08e8f24.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bban32s28cga8"
+path="res://.godot/imported/Receipt Handled 03.wav-94683738aebdf7b947290c86b3f2edfe.sample"
+
+[deps]
+
+source_file="res://audio/The Mint ÔÇô Coins and Money Preview/AUDIO/Receipt Handled 03.wav"
+dest_files=["res://.godot/imported/Receipt Handled 03.wav-94683738aebdf7b947290c86b3f2edfe.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

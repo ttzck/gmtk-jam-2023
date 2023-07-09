@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://xvghn0kqro11"
+path="res://.godot/imported/Arcane Symbol Activate 01.wav-0cbe811678daf8a3583fc07dff18c28f.sample"
+
+[deps]
+
+source_file="res://audio/Arcane Activations Preview/AUDIO/Arcane Symbol Activate 01.wav"
+dest_files=["res://.godot/imported/Arcane Symbol Activate 01.wav-0cbe811678daf8a3583fc07dff18c28f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

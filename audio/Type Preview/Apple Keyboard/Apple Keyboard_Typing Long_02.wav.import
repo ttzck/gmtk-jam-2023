@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dsp86rsm3q76h"
+path="res://.godot/imported/Apple Keyboard_Typing Long_02.wav-cb5b2521f28814e78799a18273563822.sample"
+
+[deps]
+
+source_file="res://audio/Type Preview/Apple Keyboard/Apple Keyboard_Typing Long_02.wav"
+dest_files=["res://.godot/imported/Apple Keyboard_Typing Long_02.wav-cb5b2521f28814e78799a18273563822.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

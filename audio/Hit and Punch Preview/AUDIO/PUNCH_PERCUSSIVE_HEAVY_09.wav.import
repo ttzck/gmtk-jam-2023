@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://7q4dg7jc641p"
+path="res://.godot/imported/PUNCH_PERCUSSIVE_HEAVY_09.wav-da97fad62b82c1dcde5770a7bdf470dd.sample"
+
+[deps]
+
+source_file="res://audio/Hit and Punch Preview/AUDIO/PUNCH_PERCUSSIVE_HEAVY_09.wav"
+dest_files=["res://.godot/imported/PUNCH_PERCUSSIVE_HEAVY_09.wav-da97fad62b82c1dcde5770a7bdf470dd.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

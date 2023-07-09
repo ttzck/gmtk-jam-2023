@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://s532xgguyj4c"
+path="res://.godot/imported/SCIMisc_Arm Weapon Heavy_01.wav-a6024f2cb68f1b42d3f67ab96b42c3b8.sample"
+
+[deps]
+
+source_file="res://audio/Sci Fi Weapons Cyberpunk Arsenal Preview/AUDIO/SCIMisc_Arm Weapon Heavy_01.wav"
+dest_files=["res://.godot/imported/SCIMisc_Arm Weapon Heavy_01.wav-a6024f2cb68f1b42d3f67ab96b42c3b8.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

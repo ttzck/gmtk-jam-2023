@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://de7xv2wpd1vhr"
+path="res://.godot/imported/Activate Plinth 03.wav-2482c6244a06a6ea125b5cde06359677.sample"
+
+[deps]
+
+source_file="res://audio/Arcane Activations Preview/AUDIO/Activate Plinth 03.wav"
+dest_files=["res://.godot/imported/Activate Plinth 03.wav-2482c6244a06a6ea125b5cde06359677.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

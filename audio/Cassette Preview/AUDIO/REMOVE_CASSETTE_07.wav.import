@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dssus5al7ad6w"
+path="res://.godot/imported/REMOVE_CASSETTE_07.wav-2440520d0006690da1b640bf397be447.sample"
+
+[deps]
+
+source_file="res://audio/Cassette Preview/AUDIO/REMOVE_CASSETTE_07.wav"
+dest_files=["res://.godot/imported/REMOVE_CASSETTE_07.wav-2440520d0006690da1b640bf397be447.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
