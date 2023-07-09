@@ -2,11 +2,11 @@ extends CharacterBody2D
 @export var movement_speed = 10
 @export var dash_duration = 0.1
 @export var dash_recovery = 0.2
+@export var dash_speed = 3
 
 var canDash = true
 var dashing = false
 var movement = Vector2.ZERO
-var dash_speed = 5
 var score = 0
 
 func _process(delta):
@@ -46,11 +46,13 @@ func update_movement_input():
 func dash():
 	if Input.is_action_just_pressed("dash") and not dashing:
 		dashing = true
+		collision_mask -= 2 # remove bullets from collision mask
 		movement_speed = movement_speed * dash_speed
 		await get_tree().create_timer(dash_duration).timeout
 		movement_speed = movement_speed / dash_speed / 2
 		await get_tree().create_timer(dash_recovery).timeout
 		movement_speed = movement_speed * 2
+		collision_mask += 2
 		dashing = false
 
 
