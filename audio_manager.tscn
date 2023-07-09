@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7tdde4htet38"]
+
+[ext_resource type="Script" path="res://audio_manager.gd" id="1_k6cos"]
+[ext_resource type="AudioStream" uid="uid://bs4wduipexyvk" path="res://audio/Cassette Preview/AUDIO/SLOW DOWN SPEED UP_05.wav" id="2_mrk0b"]
+
+[node name="AudioManager" type="Node"]
+script = ExtResource("1_k6cos")
+test_sound = ExtResource("2_mrk0b")
