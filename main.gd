@@ -14,7 +14,7 @@ func _process(delta):
 
 	
 func spawn_item():
-	var rand_pos = get_rand_screen_pos()
+	var rand_pos = get_rand_screen_pos(32)
 	var item_inst : Node2D = item.instantiate()
 	item_inst.global_position = rand_pos
 	item_inst.connect("collected", on_item_collected)
@@ -28,7 +28,7 @@ func on_item_collected(item):
 	spawn_item()
 
 func spawn_bullet():
-	var rand_pos = get_rand_screen_pos()
+	var rand_pos = get_rand_screen_pos(32)
 	
 	var spawn_point_inst : Node2D = bullet_spawn_point.instantiate()
 	spawn_point_inst.global_position = rand_pos
@@ -48,9 +48,11 @@ func spawn_bullet():
 	
 
 
-func get_rand_screen_pos():
+func get_rand_screen_pos(margin = 0):
 	var arena_rect = get_viewport_rect().size
-	return Vector2(randf() * arena_rect.x, randf() * arena_rect.y)
+	return Vector2(
+		randf_range(margin, arena_rect.x - margin), 
+		randf_range(margin, arena_rect.y - margin))
 
 
 func _on_bullet_spawn_timer_timeout():

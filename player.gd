@@ -28,6 +28,7 @@ func _physics_process(delta):
 					collision.get_collider().queue_free()
 				elif collision.get_collider().type == Bullet.TypeEnum.HARMFUL:
 					get_tree().reload_current_scene()
+	global_position = global_position.clamp(Vector2.ZERO, get_viewport_rect().size)
 
 
 func update_movement_input():
